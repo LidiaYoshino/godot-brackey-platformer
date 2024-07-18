@@ -1,6 +1,6 @@
+AudioStreamPlayer2D
 ColorRect
 AnimationPlayer
-AudioStreamPlayer2D
 CanvasLayer
 Control
 Container
@@ -12,4 +12,3 @@ Node
 RayCast2D
 CollisionShape2D
 AnimatedSprite2D
-Node2D

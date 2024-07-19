@@ -1,3 +1,4 @@
+Node
 AudioStreamPlayer2D
 ColorRect
 AnimationPlayer
@@ -8,7 +9,6 @@ ParallaxBackground
 SubViewport
 AspectRatioContainer
 Label
-Node
 RayCast2D
 CollisionShape2D
 AnimatedSprite2D

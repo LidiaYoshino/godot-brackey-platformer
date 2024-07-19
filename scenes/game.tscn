@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://iboyfm5w1pls"]
 
 [ext_resource type="PackedScene" uid="uid://c4s44bb6vk8ic" path="res://scenes/player.tscn" id="1_b6fou"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_m4gbx"]
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="2_hfp1e"]
 [ext_resource type="Texture2D" uid="uid://c0t1xwty8hcbo" path="res://assets/sprites/world_tileset.png" id="2_p6w54"]
 [ext_resource type="Texture2D" uid="uid://gr3klcvnebkr" path="res://assets/sprites/coin.png" id="2_rfq4v"]
 [ext_resource type="PackedScene" uid="uid://blkx2fe8w4iyt" path="res://scenes/platform.tscn" id="3_0x6ag"]
@@ -549,20 +549,17 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_m4gbx")
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("2_hfp1e")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
-
-[node name="ColorRect" type="ColorRect" parent="GameManager/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="HUD"]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 66.0
 grow_horizontal = 2
 color = Color(1, 1, 1, 0.545098)
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer"]
+[node name="Label" type="Label" parent="HUD"]
 offset_left = 73.0
 offset_top = 21.0
 offset_right = 428.0
@@ -573,7 +570,7 @@ theme_override_fonts/font = ExtResource("7_fem2n")
 theme_override_font_sizes/font_size = 32
 text = "0"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameManager/CanvasLayer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD"]
 position = Vector2(35, 35)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_31cwa")

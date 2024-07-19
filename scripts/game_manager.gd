@@ -1,9 +1,12 @@
 extends Node
 
 var score = 0
-
-@onready var label = $CanvasLayer/Label
+signal score_updated
 
 func add_point():
 	score += 1
-	label.text = str(score)
+	score_updated.emit()
+
+func clear_points():
+	score = 0
+	score_updated.emit()

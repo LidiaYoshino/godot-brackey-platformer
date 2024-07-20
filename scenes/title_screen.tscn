@@ -170,5 +170,5 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("3_j4hbk")
 theme_override_font_sizes/font_size = 32
-text = "Press Space to start"
+text = "Press Enter to start"
 horizontal_alignment = 1

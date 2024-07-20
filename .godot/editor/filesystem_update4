@@ -5,3 +5,5 @@ res://scenes/coin.tscn
 res://scenes/game_manager.tscn
 res://scenes/title_screen.tscn
 res://scenes/Levels/level01.tscn
+res://scripts/game_manager.gd
+res://scripts/screen_manager.gd

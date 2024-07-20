@@ -1,6 +1,8 @@
+Label
+TileMap
+ColorRect
 Node
 AudioStreamPlayer2D
-ColorRect
 AnimationPlayer
 CanvasLayer
 Control
@@ -8,7 +10,5 @@ Container
 ParallaxBackground
 SubViewport
 AspectRatioContainer
-Label
 RayCast2D
 CollisionShape2D
-AnimatedSprite2D

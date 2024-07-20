@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://ccrdi368k5if0"]
+[gd_scene load_steps=15 format=3 uid="uid://ccrdi368k5if0"]
 
+[ext_resource type="PackedScene" uid="uid://qqkmterxc3x7" path="res://scenes/hud.tscn" id="1_0s2e6"]
 [ext_resource type="PackedScene" uid="uid://c4s44bb6vk8ic" path="res://scenes/player.tscn" id="1_c7akd"]
 [ext_resource type="Texture2D" uid="uid://c0t1xwty8hcbo" path="res://assets/sprites/world_tileset.png" id="2_rmlee"]
 [ext_resource type="PackedScene" uid="uid://mjtwnx6i7mbq" path="res://scenes/killzone.tscn" id="3_mon0x"]
@@ -454,6 +455,8 @@ _data = {
 }
 
 [node name="Level" type="Node"]
+
+[node name="HUD" parent="." instance=ExtResource("1_0s2e6")]
 
 [node name="Player" parent="." instance=ExtResource("1_c7akd")]
 

@@ -9,3 +9,5 @@ res://scripts/coin.gd
 res://scripts/killzone.gd
 res://scripts/player.gd
 res://scripts/slime.gd
+res://scenes/title_screen.tscn
+res://scenes/Levels/level01.tscn

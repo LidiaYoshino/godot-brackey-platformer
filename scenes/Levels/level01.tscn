@@ -454,7 +454,7 @@ _data = {
 "move": SubResource("Animation_d53l1")
 }
 
-[node name="Level" type="Node"]
+[node name="Level" type="Node2D"]
 
 [node name="HUD" parent="." instance=ExtResource("1_0s2e6")]
 

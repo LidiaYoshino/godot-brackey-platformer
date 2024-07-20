@@ -1,11 +1,9 @@
-res://scenes/coin.tscn
-res://scripts/game_manager.gd
 res://scenes/game.tscn
-res://scripts/HUD.gd
 res://scenes/player.tscn
 res://scenes/platform.tscn
+res://scenes/coin.tscn
 res://scenes/game_manager.tscn
-res://scripts/coin.gd
-res://scripts/killzone.gd
-res://scripts/player.gd
-res://scripts/slime.gd
+res://scenes/title_screen.tscn
+res://scenes/Levels/level01.tscn
+res://scripts/game_manager.gd
+res://scripts/screen_manager.gd

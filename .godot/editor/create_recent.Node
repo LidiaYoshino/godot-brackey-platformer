@@ -1,3 +1,5 @@
+AnimatedSprite2D
+Sprite2D
 AudioStreamPlayer
 Control
 ColorRect
@@ -11,5 +13,3 @@ Node
 AudioStreamPlayer2D
 AnimationPlayer
 CanvasLayer
-Container
-ParallaxBackground

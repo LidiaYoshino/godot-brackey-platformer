@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://qqkmterxc3x7"]
+[gd_scene load_steps=20 format=3 uid="uid://qqkmterxc3x7"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_xy16v"]
 [ext_resource type="FontFile" uid="uid://fwyqxh2ih76s" path="res://assets/fonts/PixelOperator8.ttf" id="2_ey387"]
 [ext_resource type="Texture2D" uid="uid://gr3klcvnebkr" path="res://assets/sprites/coin.png" id="3_xsnay"]
+[ext_resource type="Texture2D" uid="uid://di5p70irlxlmu" path="res://assets/sprites/fruit.png" id="4_wo1r2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuq8u"]
 atlas = ExtResource("3_xsnay")
@@ -96,6 +97,21 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_inaft"]
+atlas = ExtResource("4_wo1r2")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x12wg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inaft")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_xy16v")
 
@@ -106,7 +122,7 @@ offset_bottom = 66.0
 grow_horizontal = 2
 color = Color(1, 1, 1, 0.545098)
 
-[node name="Label" type="Label" parent="."]
+[node name="CoinLabel" type="Label" parent="."]
 offset_left = 73.0
 offset_top = 21.0
 offset_right = 428.0
@@ -117,9 +133,25 @@ theme_override_fonts/font = ExtResource("2_ey387")
 theme_override_font_sizes/font_size = 32
 text = "0"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Coin" type="AnimatedSprite2D" parent="."]
 position = Vector2(35, 35)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_31cwa")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="FruitLabel" type="Label" parent="."]
+offset_left = 1005.0
+offset_top = 21.0
+offset_right = 1136.0
+offset_bottom = 53.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.105882, 0.105882, 0.105882, 1)
+theme_override_fonts/font = ExtResource("2_ey387")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="Fruit" type="AnimatedSprite2D" parent="."]
+position = Vector2(966, 31)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_x12wg")

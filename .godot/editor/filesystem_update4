@@ -3,3 +3,5 @@ res://scripts/killzone.gd
 res://scenes/game.tscn
 res://scenes/Levels/level01.tscn
 res://scenes/coin.tscn
+res://scenes/hud.tscn
+res://scripts/HUD.gd

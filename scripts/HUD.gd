@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var label = $Label
+@onready var coin_counter = $CoinLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,4 +13,4 @@ func _process(delta):
 	pass
 
 func update_coin_counter():
-	label.text = str(GameManager.score)
+	coin_counter.text = str(GameManager.score)

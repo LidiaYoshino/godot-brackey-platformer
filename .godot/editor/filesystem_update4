@@ -5,3 +5,4 @@ res://scenes/Levels/level01.tscn
 res://scenes/coin.tscn
 res://scenes/hud.tscn
 res://scripts/HUD.gd
+res://scripts/game_manager.gd

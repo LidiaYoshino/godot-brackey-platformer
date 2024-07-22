@@ -1,6 +1,10 @@
-AnimatedSprite2D
-Sprite2D
+AnimationPlayer
+Node
 AudioStreamPlayer
+CollisionShape2D
+AnimatedSprite2D
+Area2D
+Sprite2D
 Control
 ColorRect
 CenterContainer
@@ -9,7 +13,3 @@ VFlowContainer
 Node2D
 Label
 TileMap
-Node
-AudioStreamPlayer2D
-AnimationPlayer
-CanvasLayer

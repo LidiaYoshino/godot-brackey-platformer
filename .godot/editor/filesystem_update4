@@ -6,3 +6,4 @@ res://scenes/hud.tscn
 res://scenes/fruit.tscn
 res://scenes/player.tscn
 res://scripts/game_manager.gd
+res://scripts/coin.gd

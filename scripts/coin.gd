@@ -4,4 +4,5 @@ extends Area2D
 
 func _on_body_entered(body):
 	GameManager.add_point()
+	GameManager.convert_coins_to_life()
 	animation_player.play("pickup")

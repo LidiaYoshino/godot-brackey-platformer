@@ -21,3 +21,4 @@ func add_life():
 func reduce_life():
 	lives -= 1
 	lives_updated.emit()
+

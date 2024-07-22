@@ -1,11 +1,8 @@
-res://scenes/killzone.tscn
-res://scripts/killzone.gd
 res://scenes/game.tscn
 res://scenes/Levels/level01.tscn
+res://scenes/killzone.tscn
 res://scenes/coin.tscn
 res://scenes/hud.tscn
-res://scripts/HUD.gd
-res://scripts/game_manager.gd
 res://scenes/fruit.tscn
-res://scripts/fruit.gd
 res://scenes/player.tscn
+res://scripts/game_manager.gd

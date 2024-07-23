@@ -1,15 +1,3 @@
-res://scenes/game.tscn
-res://scenes/Levels/level01.tscn
-res://scenes/killzone.tscn
-res://scenes/coin.tscn
-res://scenes/hud.tscn
-res://scenes/fruit.tscn
-res://scenes/player.tscn
+res://scenes/finish_line.tscn
 res://scripts/game_manager.gd
-res://scripts/coin.gd
-res://scenes/game_over.tscn
-res://scripts/game_over.gd
-res://scenes/title_screen.tscn
-res://scripts/screen_manager.gd
-res://scripts/killzone.gd
-res://scripts/HUD.gd
+res://scripts/finish_line.gd

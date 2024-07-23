@@ -8,6 +8,7 @@ signal score_updated
 signal lives_updated
 signal player_died
 signal game_over
+signal finish_reached
 
 
 func add_point():

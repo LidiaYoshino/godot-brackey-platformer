@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccrdi368k5if0"]
+[gd_scene load_steps=16 format=3 uid="uid://ccrdi368k5if0"]
 
 [ext_resource type="PackedScene" uid="uid://qqkmterxc3x7" path="res://scenes/hud.tscn" id="1_0s2e6"]
 [ext_resource type="PackedScene" uid="uid://c4s44bb6vk8ic" path="res://scenes/player.tscn" id="1_c7akd"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bot6bxr5enkjt" path="res://scenes/coin.tscn" id="5_ipk6k"]
 [ext_resource type="PackedScene" uid="uid://c8uctal33k4vb" path="res://scenes/slime.tscn" id="6_kofgv"]
 [ext_resource type="FontFile" uid="uid://fwyqxh2ih76s" path="res://assets/fonts/PixelOperator8.ttf" id="7_2yq1l"]
+[ext_resource type="PackedScene" uid="uid://cnxfntcj5s0y5" path="res://scenes/fruit.tscn" id="9_yo4w7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lqwp"]
 texture = ExtResource("2_rmlee")
@@ -510,19 +511,19 @@ position = Vector2(50, 43)
 position = Vector2(223, -38)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("5_ipk6k")]
-position = Vector2(439, 25)
+position = Vector2(76, -59)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("5_ipk6k")]
-position = Vector2(467, 25)
+position = Vector2(105, -58)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("5_ipk6k")]
-position = Vector2(495, 25)
+position = Vector2(62, -58)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("5_ipk6k")]
-position = Vector2(523, 25)
+position = Vector2(90, -58)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("5_ipk6k")]
-position = Vector2(551, 25)
+position = Vector2(118, -58)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("5_ipk6k")]
 position = Vector2(453, 25)
@@ -605,3 +606,8 @@ theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("7_2yq1l")
 theme_override_font_sizes/font_size = 8
 text = "Falling hurts"
+
+[node name="Fruits" type="Node" parent="."]
+
+[node name="Fruit" parent="Fruits" instance=ExtResource("9_yo4w7")]
+position = Vector2(-32, 36)

@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://be13pw8rjkgsa"]
+[gd_scene load_steps=3 format=3 uid="uid://cketrhak63m78"]
 
-[ext_resource type="Script" path="res://scripts/restart.gd" id="1_avlg4"]
-[ext_resource type="FontFile" uid="uid://ba4slkm336nnt" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_vp6y4"]
+[ext_resource type="Script" path="res://scripts/restart.gd" id="1_hgsx3"]
+[ext_resource type="FontFile" uid="uid://ba4slkm336nnt" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_xlpjb"]
 
-[node name="GameOver" type="Control"]
+[node name="Victory" type="Control"]
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-script = ExtResource("1_avlg4")
+script = ExtResource("1_hgsx3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.435294, 0.172549, 0.466667, 1)
+color = Color(1, 0.823529, 0.2, 1)
 
 [node name="HFlowContainer" type="HFlowContainer" parent="."]
 layout_mode = 1
@@ -33,21 +33,21 @@ grow_vertical = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="HFlowContainer"]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(1000, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.901961, 0.372549, 0.411765, 1)
-theme_override_fonts/font = ExtResource("1_vp6y4")
+theme_override_fonts/font = ExtResource("2_xlpjb")
 theme_override_font_sizes/font_size = 64
-text = "GAME OVER"
+text = "VICTORY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="HFlowContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.901961, 0.372549, 0.411765, 1)
-theme_override_fonts/font = ExtResource("1_vp6y4")
+theme_override_fonts/font = ExtResource("2_xlpjb")
 theme_override_font_sizes/font_size = 32
-text = "press enter to try again"
+text = "press enter to restart"
 horizontal_alignment = 1
 vertical_alignment = 1

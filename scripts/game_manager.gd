@@ -6,6 +6,8 @@ var life_cost = 100
 
 signal score_updated
 signal lives_updated
+signal player_died
+signal game_over
 
 
 func add_point():
@@ -27,8 +29,16 @@ func add_life():
 func reduce_life():
 	lives -= 1
 	lives_updated.emit()
+	if lives <= 0:
+		game_over.emit()
+	else:
+		player_died.emit()
 
 func convert_coins_to_life():
 	if score - life_cost >= 0:
 		update_score(life_cost)
 		add_life()
+
+func reset_values():
+	score = 0
+	lives = 1

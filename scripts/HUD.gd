@@ -20,3 +20,4 @@ func update_coin_counter():
 
 func update_lives_counter():
 	fruit_counter.text = str(GameManager.lives)
+	

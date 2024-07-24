@@ -11,6 +11,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var jump_sound = $JumpSound
 
+func _ready():
+	GameManager.connect("player_bounced", bounce)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -46,3 +48,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func bounce():
+	velocity.y = JUMP_VELOCITY

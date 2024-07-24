@@ -15,5 +15,3 @@ func _on_timer_timeout():
 	Engine.time_scale = 1
 	GameManager.clear_points()
 	GameManager.reduce_life()
-	# get_tree().reload_current_scene()
-	# level_container.reload_current_scene()

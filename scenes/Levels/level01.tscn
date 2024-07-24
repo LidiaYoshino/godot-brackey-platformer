@@ -575,6 +575,10 @@ position = Vector2(573, 21)
 
 [node name="Slime" parent="Enemies" instance=ExtResource("6_kofgv")]
 position = Vector2(223, -27)
+moving = true
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("6_kofgv")]
+position = Vector2(56, 53)
 
 [node name="Labels" type="Node" parent="."]
 

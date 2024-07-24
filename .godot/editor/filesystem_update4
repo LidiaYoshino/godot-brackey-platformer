@@ -7,3 +7,11 @@ res://scenes/Levels/level01.tscn
 res://scripts/screen_manager.gd
 res://scenes/game.tscn
 res://scenes/coin.tscn
+res://scripts/restart.gd
+res://scenes/slime.tscn
+res://scripts/slime.gd
+res://scenes/killzone.tscn
+res://scripts/killzone.gd
+res://scenes/platform.tscn
+res://scripts/player.gd
+res://scenes/player.tscn

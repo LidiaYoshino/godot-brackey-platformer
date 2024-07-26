@@ -8,3 +8,5 @@ res://scenes/player.tscn
 res://scenes/finish_line.tscn
 res://scripts/finish_line.gd
 res://scenes/Levels/level02.tscn
+res://scripts/game_manager.gd
+res://scripts/screen_manager.gd

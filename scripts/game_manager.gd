@@ -8,7 +8,7 @@ signal score_updated
 signal lives_updated
 signal player_died
 signal game_over
-signal finish_reached
+signal finish_reached(door_type)
 signal player_bounced
 
 

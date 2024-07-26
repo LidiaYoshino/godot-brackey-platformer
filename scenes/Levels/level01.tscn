@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8uctal33k4vb" path="res://scenes/slime.tscn" id="6_kofgv"]
 [ext_resource type="FontFile" uid="uid://fwyqxh2ih76s" path="res://assets/fonts/PixelOperator8.ttf" id="7_2yq1l"]
 [ext_resource type="PackedScene" uid="uid://cnxfntcj5s0y5" path="res://scenes/fruit.tscn" id="9_yo4w7"]
-[ext_resource type="PackedScene" path="res://scenes/finish_line.tscn" id="10_myau1"]
+[ext_resource type="PackedScene" uid="uid://p23rfpm6hbfe" path="res://scenes/finish_line.tscn" id="10_myau1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lqwp"]
 texture = ExtResource("2_rmlee")
@@ -618,4 +618,4 @@ text = "Falling hurts"
 position = Vector2(-32, 36)
 
 [node name="FinishLine" parent="." instance=ExtResource("10_myau1")]
-position = Vector2(615, 56)
+position = Vector2(697, 56)

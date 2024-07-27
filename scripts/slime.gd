@@ -28,7 +28,7 @@ func move(delta):
 	position.x += direction * SPEED * delta
 
 
-func _on_vulnerable_zone_body_entered(body):
+func _on_vulnerable_zone_body_entered(_body):
 	moving = false
 	GameManager.player_bounced.emit()
 	animation_player.play("death")

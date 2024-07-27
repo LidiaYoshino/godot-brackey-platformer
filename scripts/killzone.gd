@@ -2,7 +2,6 @@ extends Area2D
 
 @onready var timer = $Timer
 @onready var audio_stream_player = $AudioStreamPlayer
-@onready var level_container = %LevelContainer
 
 func _on_body_entered(body):
 	Engine.time_scale = 0.5

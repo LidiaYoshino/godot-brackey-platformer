@@ -433,6 +433,21 @@ layer_1/tile_data = PackedInt32Array(196607, 65536, 1, 131072, 0, 1, 327682, 655
 
 [node name="Coins" type="Node" parent="."]
 
+[node name="Coin71" parent="Coins" instance=ExtResource("5_ipk6k")]
+position = Vector2(519, 83)
+
+[node name="Coin72" parent="Coins" instance=ExtResource("5_ipk6k")]
+position = Vector2(488, 83)
+
+[node name="Coin73" parent="Coins" instance=ExtResource("5_ipk6k")]
+position = Vector2(456, 82)
+
+[node name="Coin74" parent="Coins" instance=ExtResource("5_ipk6k")]
+position = Vector2(393, 82)
+
+[node name="Coin75" parent="Coins" instance=ExtResource("5_ipk6k")]
+position = Vector2(425, 82)
+
 [node name="Coin" parent="Coins" instance=ExtResource("5_ipk6k")]
 position = Vector2(135, 50)
 

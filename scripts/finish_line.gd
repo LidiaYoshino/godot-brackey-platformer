@@ -13,5 +13,5 @@ func _ready():
 func finish_line():
 	GameManager.finish_reached.emit(door_type)
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	animation_player.play('finish')

@@ -2,16 +2,19 @@ extends Node2D
 
 const LEVEL_01 = preload("res://scenes/Levels/level01.tscn")
 const LEVEL_02 = preload("res://scenes/Levels/level02.tscn")
+const LEVEL_03 = preload("res://scenes/Levels/level03.tscn")
+const LEVEL_04 = preload("res://scenes/Levels/level04.tscn")
+const LEVEL_05 = preload("res://scenes/Levels/level05.tscn")
 const GAME_OVER = preload("res://scenes/game_over.tscn")
 const VICTORY = preload("res://scenes/victory.tscn")
 
 const LEVEL_BY_TYPE = {
 	"bare": LEVEL_01,
 	"grass": LEVEL_02,
-	"sand": LEVEL_01,
-	"pumpkin": LEVEL_01,
-	"ice": LEVEL_01,
-	"home": LEVEL_01,
+	"sand": LEVEL_03,
+	"pumpkin": LEVEL_04,
+	"ice": LEVEL_05,
+	"home": VICTORY,
 }
 
 @onready var title_screen = $"Title Screen"
@@ -26,7 +29,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("confirm"):
 		title_screen.visible = false
 		load_current_level()

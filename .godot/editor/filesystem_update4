@@ -10,3 +10,13 @@ res://scripts/finish_line.gd
 res://scenes/Levels/level02.tscn
 res://scripts/game_manager.gd
 res://scripts/screen_manager.gd
+res://scripts/player.gd
+res://scenes/Levels/level03.tscn
+res://scenes/Levels/level04.tscn
+res://scenes/Levels/level05.tscn
+res://scripts/HUD.gd
+res://scripts/coin.gd
+res://scripts/fruit.gd
+res://scripts/slime.gd
+res://scripts/killzone.gd
+res://scripts/restart.gd

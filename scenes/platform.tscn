@@ -1,17 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://blkx2fe8w4iyt"]
+[gd_scene load_steps=9 format=3 uid="uid://blkx2fe8w4iyt"]
 
-[ext_resource type="Texture2D" uid="uid://r3ddmtk1aap6" path="res://assets/sprites/platforms.png" id="1_hqjwl"]
+[ext_resource type="Script" path="res://scripts/platform.gd" id="1_txqxh"]
+[ext_resource type="Texture2D" uid="uid://by522dq8q7jn" path="res://assets/sprites/platforms_double.png" id="2_hdxhd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eq0nw"]
 size = Vector2(32, 8)
 
-[node name="Platform" type="AnimatableBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h4by"]
+atlas = ExtResource("2_hdxhd")
+region = Rect2(0, 0, 32, 9)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hqjwl")
-region_enabled = true
-region_rect = Rect2(16, 0, 32, 9)
+[sub_resource type="AtlasTexture" id="AtlasTexture_77e0u"]
+atlas = ExtResource("2_hdxhd")
+region = Rect2(96, 0, 32, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgqji"]
+atlas = ExtResource("2_hdxhd")
+region = Rect2(64, 0, 32, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exo2q"]
+atlas = ExtResource("2_hdxhd")
+region = Rect2(32, 0, 32, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qelef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h4by")
+}],
+"loop": true,
+"name": &"grass",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77e0u")
+}],
+"loop": true,
+"name": &"ice",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgqji")
+}],
+"loop": true,
+"name": &"pumpkin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exo2q")
+}],
+"loop": true,
+"name": &"sand",
+"speed": 5.0
+}]
+
+[node name="Platform" type="AnimatableBody2D"]
+script = ExtResource("1_txqxh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_eq0nw")
 one_way_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qelef")
+animation = &"grass"
+autoplay = "grass"

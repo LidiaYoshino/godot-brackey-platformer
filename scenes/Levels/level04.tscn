@@ -485,6 +485,7 @@ shape = SubResource("WorldBoundaryShape2D_i1gux")
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("5_5s0ek")]
 position = Vector2(432, 37)
+platform_type = "pumpkin"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
@@ -494,6 +495,7 @@ autoplay = "RESET"
 
 [node name="Platform" parent="Platforms" instance=ExtResource("5_5s0ek")]
 position = Vector2(0, -26)
+platform_type = "pumpkin"
 
 [node name="Coins" type="Node" parent="."]
 
@@ -566,7 +568,7 @@ position = Vector2(573, 21)
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("7_1ndwl")]
-position = Vector2(223, -27)
+position = Vector2(217, 4)
 moving = true
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("7_1ndwl")]

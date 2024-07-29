@@ -485,6 +485,7 @@ shape = SubResource("WorldBoundaryShape2D_i1gux")
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("5_rbqxt")]
 position = Vector2(432, 37)
+platform_type = "ice"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
@@ -494,6 +495,7 @@ autoplay = "RESET"
 
 [node name="Platform" parent="Platforms" instance=ExtResource("5_rbqxt")]
 position = Vector2(0, -26)
+platform_type = "ice"
 
 [node name="Coins" type="Node" parent="."]
 

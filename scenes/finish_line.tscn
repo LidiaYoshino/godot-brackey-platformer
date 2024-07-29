@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://p23rfpm6hbfe"]
 
 [ext_resource type="Script" path="res://scripts/finish_line.gd" id="1_66v00"]
-[ext_resource type="AudioStream" path="res://assets/sounds/level_pass.mp3" id="2_3imno"]
+[ext_resource type="AudioStream" uid="uid://de4p47qo0aht3" path="res://assets/sounds/level_pass.mp3" id="2_3imno"]
 [ext_resource type="Texture2D" uid="uid://bmfq478fgf46o" path="res://assets/sprites/door.png" id="2_8kkm4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbsbj"]

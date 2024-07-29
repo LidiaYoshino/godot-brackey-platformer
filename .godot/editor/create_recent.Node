@@ -1,10 +1,10 @@
+AnimatedSprite2D
+AnimationPlayer
 CollisionShape2D
 StaticBody2D
-AnimationPlayer
 AudioStreamPlayer2D
 Area2D
 RayCast2D
-AnimatedSprite2D
 Node
 HFlowContainer
 VFlowContainer

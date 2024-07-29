@@ -5,3 +5,4 @@ res://scenes/Levels/level01.tscn
 res://scenes/Levels/level04.tscn
 res://scenes/Levels/level05.tscn
 res://scenes/platform.tscn
+res://scripts/killzone.gd

@@ -459,7 +459,6 @@ _data = {
 [node name="Level" type="Node2D"]
 
 [node name="HUD" parent="." instance=ExtResource("1_1qv4a")]
-visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_1apyg")]
 

@@ -500,25 +500,10 @@ platform_type = "sand"
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("6_yv2ot")]
-position = Vector2(104, 3)
+position = Vector2(56, -72)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("6_yv2ot")]
 position = Vector2(223, -38)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("6_yv2ot")]
-position = Vector2(76, -59)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("6_yv2ot")]
-position = Vector2(105, -58)
-
-[node name="Coin6" parent="Coins" instance=ExtResource("6_yv2ot")]
-position = Vector2(62, -58)
-
-[node name="Coin7" parent="Coins" instance=ExtResource("6_yv2ot")]
-position = Vector2(90, -58)
-
-[node name="Coin8" parent="Coins" instance=ExtResource("6_yv2ot")]
-position = Vector2(118, -58)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("6_yv2ot")]
 position = Vector2(453, 25)
@@ -571,37 +556,40 @@ position = Vector2(573, 21)
 position = Vector2(216, 4)
 moving = true
 
+[node name="Slime2" parent="Enemies" instance=ExtResource("7_xsw56")]
+position = Vector2(56, 4)
+
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = -45.0
-offset_top = -67.0
-offset_right = 137.0
-offset_bottom = -40.0
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 133.0
+offset_bottom = -7.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("8_mny21")
 theme_override_font_sizes/font_size = 8
-text = "Space to jump."
+text = "Beware of slimes"
 
 [node name="Label2" type="Label" parent="Labels"]
-offset_left = 456.0
-offset_top = 2.0
-offset_right = 638.0
-offset_bottom = 29.0
+offset_left = 94.0
+offset_top = -61.0
+offset_right = 276.0
+offset_bottom = -34.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("8_mny21")
 theme_override_font_sizes/font_size = 8
-text = "Collect coins."
+text = "Some move too"
 
 [node name="Label3" type="Label" parent="Labels"]
-offset_left = 221.0
-offset_top = 66.0
-offset_right = 403.0
-offset_bottom = 93.0
+offset_left = 152.0
+offset_top = -21.0
+offset_right = 412.0
+offset_bottom = 6.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("8_mny21")
 theme_override_font_sizes/font_size = 8
-text = "Falling hurts"
+text = "jumping or falling on top will defeat them"
 
 [node name="Fruits" type="Node" parent="."]
 

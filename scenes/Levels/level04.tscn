@@ -577,6 +577,7 @@ position = Vector2(57, 4)
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
+visible = false
 offset_left = -45.0
 offset_top = -67.0
 offset_right = 137.0
@@ -587,6 +588,7 @@ theme_override_font_sizes/font_size = 8
 text = "Space to jump."
 
 [node name="Label2" type="Label" parent="Labels"]
+visible = false
 offset_left = 456.0
 offset_top = 2.0
 offset_right = 638.0
@@ -597,6 +599,7 @@ theme_override_font_sizes/font_size = 8
 text = "Collect coins."
 
 [node name="Label3" type="Label" parent="Labels"]
+visible = false
 offset_left = 221.0
 offset_top = 66.0
 offset_right = 403.0

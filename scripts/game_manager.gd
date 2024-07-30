@@ -12,6 +12,8 @@ signal game_over
 signal finish_reached(door_type)
 signal player_bounced
 
+@onready var sfx = $SFX
+
 
 func add_point():
 	score += 1
@@ -39,6 +41,7 @@ func reduce_life():
 
 func convert_coins_to_life():
 	if score - life_cost >= 0:
+		sfx.play()
 		update_score(life_cost)
 		add_life()
 

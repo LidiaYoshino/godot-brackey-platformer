@@ -8,3 +8,5 @@ res://scripts/fruit.gd
 res://scenes/fruit.tscn
 res://scripts/screen_manager.gd
 res://scripts/game_manager.gd
+res://scenes/music.tscn
+res://scenes/game_manager.tscn

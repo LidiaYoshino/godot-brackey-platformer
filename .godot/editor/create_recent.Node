@@ -1,11 +1,11 @@
+AudioStreamPlayer2D
+Node
 AnimatedSprite2D
 AnimationPlayer
 CollisionShape2D
 StaticBody2D
-AudioStreamPlayer2D
 Area2D
 RayCast2D
-Node
 HFlowContainer
 VFlowContainer
 Label

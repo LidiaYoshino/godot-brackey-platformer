@@ -3,6 +3,7 @@ extends Node
 var lives = 1
 var score = 0
 var life_cost = 100
+var picked_fruits = {}
 
 signal score_updated
 signal lives_updated
@@ -10,6 +11,8 @@ signal player_died
 signal game_over
 signal finish_reached(door_type)
 signal player_bounced
+
+@onready var sfx = $SFX
 
 
 func add_point():
@@ -38,9 +41,15 @@ func reduce_life():
 
 func convert_coins_to_life():
 	if score - life_cost >= 0:
+		sfx.play()
 		update_score(life_cost)
 		add_life()
 
 func reset_values():
 	score = 0
 	lives = 1
+	picked_fruits.clear()
+
+func pick_fruit(id):
+	picked_fruits[id] = true
+	add_life()

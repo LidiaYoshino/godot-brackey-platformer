@@ -621,6 +621,7 @@ text = "100 coins turns into a berry"
 
 [node name="Fruit" parent="Fruits" instance=ExtResource("9_ishwc")]
 position = Vector2(-497, 39)
+id = "test"
 
 [node name="FinishLine" parent="." instance=ExtResource("10_bhp0b")]
 position = Vector2(631, 3)

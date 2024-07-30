@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5mjeyeew0717"]
+[gd_scene load_steps=3 format=3 uid="uid://c5mjeyeew0717"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_e1ngj"]
+[ext_resource type="AudioStream" uid="uid://b0udv6h6amfoj" path="res://assets/sounds/power_up.wav" id="2_woxdw"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_e1ngj")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_woxdw")
+bus = &"SFX"

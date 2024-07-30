@@ -40,6 +40,8 @@ func load_current_level():
 func reload_level():
 	level_container.get_child(0).queue_free()
 	load_current_level()
+	get_tree().call_group("picked_fruits", "unspawn")
+	
 
 func end_game():
 	level_container.get_child(0).queue_free()

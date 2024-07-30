@@ -2,3 +2,9 @@ res://scenes/Levels/level03.tscn
 res://scenes/Levels/level02.tscn
 res://scenes/Levels/level04.tscn
 res://scenes/Levels/level05.tscn
+res://scenes/Levels/level01.tscn
+res://scenes/game.tscn
+res://scripts/fruit.gd
+res://scenes/fruit.tscn
+res://scripts/screen_manager.gd
+res://scripts/game_manager.gd

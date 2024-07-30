@@ -3,6 +3,7 @@ extends Node
 var lives = 1
 var score = 0
 var life_cost = 100
+var picked_fruits = {}
 
 signal score_updated
 signal lives_updated
@@ -44,3 +45,8 @@ func convert_coins_to_life():
 func reset_values():
 	score = 0
 	lives = 1
+	picked_fruits.clear()
+
+func pick_fruit(id):
+	picked_fruits[id] = true
+	add_life()

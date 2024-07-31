@@ -50,6 +50,10 @@ confirm={
 ]
 }
 
+[physics]
+
+common/physics_ticks_per_second=200
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

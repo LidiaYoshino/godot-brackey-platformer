@@ -1,5 +1,8 @@
-res://scenes/game_manager.tscn
 res://scenes/Levels/level02.tscn
 res://scenes/fruit.tscn
 res://scenes/game.tscn
 res://scenes/music.tscn
+res://scenes/game_manager.tscn
+res://scenes/slime.tscn
+res://scripts/slime.gd
+res://scenes/Levels/level03.tscn

@@ -173,6 +173,10 @@ target_position = Vector2(8, 0)
 position = Vector2(0, 5)
 target_position = Vector2(-8, 0)
 
+[node name="RayCastDown" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(0, 10)
+
 [node name="VulnerableZone" type="Area2D" parent="."]
 collision_mask = 2
 

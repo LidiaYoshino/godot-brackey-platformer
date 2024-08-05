@@ -553,11 +553,12 @@ position = Vector2(573, 21)
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("7_xsw56")]
-position = Vector2(216, 4)
+position = Vector2(216, -5)
 moving = true
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("7_xsw56")]
-position = Vector2(56, 4)
+position = Vector2(55, -6)
+moving = true
 
 [node name="Labels" type="Node" parent="."]
 

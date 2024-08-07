@@ -22,6 +22,7 @@ GameManager="*res://scenes/game_manager.tscn"
 
 [display]
 
+window/size/viewport_height=640
 window/stretch/mode="viewport"
 
 [input]

@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vw4yo"]
-size = Vector2(16, 22)
+size = Vector2(6, 11)
 
 [sub_resource type="Animation" id="Animation_x4j7x"]
 length = 0.001
@@ -183,7 +183,7 @@ animation = &"grass"
 autoplay = "grass"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_vw4yo")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

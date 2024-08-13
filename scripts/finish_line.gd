@@ -14,4 +14,5 @@ func finish_line():
 	GameManager.finish_reached.emit(door_type)
 
 func _on_body_entered(_body):
+	GameManager.allow_movement = false
 	animation_player.play('finish')

@@ -96,8 +96,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pv1b0"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anh24"]
 radius = 5.0
+height = 14.0
 
 [sub_resource type="Animation" id="Animation_p4yn8"]
 length = 0.001
@@ -209,7 +210,8 @@ frame = 6
 frame_progress = 0.795927
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_pv1b0")
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_anh24")
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_e6gmt")

@@ -9,3 +9,4 @@ res://scripts/screen_manager.gd
 res://scripts/finish_line.gd
 res://scripts/player.gd
 res://scenes/finish_line.tscn
+res://scripts/killzone.gd

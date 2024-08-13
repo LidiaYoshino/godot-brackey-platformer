@@ -626,9 +626,11 @@ horizontal_alignment = 1
 
 [node name="Fruit" parent="Fruits" instance=ExtResource("9_n4ksc")]
 position = Vector2(-32, 36)
+id = "301"
 
 [node name="Fruit2" parent="Fruits" instance=ExtResource("9_n4ksc")]
 position = Vector2(984, -56)
+id = "302"
 
 [node name="FinishLine" parent="." instance=ExtResource("10_f54r4")]
 position = Vector2(953, -108)

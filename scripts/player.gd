@@ -28,16 +28,16 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 	
 	# Flip the Sprite
-	if direction > 0:
+	if direction > 0 and GameManager.allow_movement == true:
 		animated_sprite.flip_h = false
-	elif direction < 0:
+	elif direction < 0 and GameManager.allow_movement == true:
 		animated_sprite.flip_h = true
 	
 	# Play animations
 	if is_on_floor():
 		if direction == 0:
 			animated_sprite.play("idle")
-		else:
+		elif GameManager.allow_movement == true:
 			animated_sprite.play("run")
 	else: animated_sprite.play("jump")
 	
@@ -46,8 +46,13 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+	
+	if GameManager.allow_movement == true:
+		move_and_slide()
+	else:
+		if not is_on_floor():
+			move_and_slide()
+	
 	
 func bounce():
 	velocity.y = JUMP_VELOCITY

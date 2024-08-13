@@ -51,4 +51,5 @@ func finish_level(door_type):
 	current_level = door_type
 	level_container.get_child(0).queue_free()
 	load_current_level()
+	GameManager.allow_movement = true
 

@@ -4,6 +4,7 @@ var lives = 1
 var score = 0
 var life_cost = 100
 var picked_fruits = {}
+var allow_movement = true
 
 signal score_updated
 signal lives_updated

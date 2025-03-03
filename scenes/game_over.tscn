@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://be13pw8rjkgsa"]
 
-[ext_resource type="Script" path="res://scripts/restart.gd" id="1_avlg4"]
+[ext_resource type="Script" uid="uid://ddx6hejbu0okt" path="res://scripts/restart.gd" id="1_avlg4"]
 [ext_resource type="FontFile" uid="uid://ba4slkm336nnt" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_vp6y4"]
 
 [node name="GameOver" type="Control"]

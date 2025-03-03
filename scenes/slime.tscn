@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://c8uctal33k4vb"]
 
 [ext_resource type="Texture2D" uid="uid://41mq3j24yjku" path="res://assets/sprites/slime_green.png" id="1_bvi72"]
-[ext_resource type="Script" path="res://scripts/slime.gd" id="1_rwqh8"]
+[ext_resource type="Script" uid="uid://dpshu8dkmtoh2" path="res://scripts/slime.gd" id="1_rwqh8"]
 [ext_resource type="PackedScene" uid="uid://mjtwnx6i7mbq" path="res://scenes/killzone.tscn" id="2_302nk"]
 [ext_resource type="AudioStream" uid="uid://cue5a36ect7l3" path="res://assets/sounds/tap.wav" id="4_vmk0q"]
 
@@ -147,8 +147,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t6436"]
 _data = {
-"RESET": SubResource("Animation_3rxcj"),
-"death": SubResource("Animation_g0f6k")
+&"RESET": SubResource("Animation_3rxcj"),
+&"death": SubResource("Animation_g0f6k")
 }
 
 [node name="Slime" type="Node2D"]
@@ -192,7 +192,7 @@ bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_t6436")
+&"": SubResource("AnimationLibrary_t6436")
 }
 
 [connection signal="body_entered" from="VulnerableZone" to="." method="_on_vulnerable_zone_body_entered"]

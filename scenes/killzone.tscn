@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://mjtwnx6i7mbq"]
 
-[ext_resource type="Script" path="res://scripts/killzone.gd" id="1_ocspa"]
+[ext_resource type="Script" uid="uid://cj4c1uywmfa3" path="res://scripts/killzone.gd" id="1_ocspa"]
 [ext_resource type="AudioStream" uid="uid://d0snv1ahq70cg" path="res://assets/sounds/hurt.wav" id="2_l5rlj"]
 
 [node name="Killzone" type="Area2D" groups=["danger"]]

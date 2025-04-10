@@ -1,8 +1,10 @@
+Timer
+CPUParticles2D
+AnimationPlayer
 TextureRect
 AudioStreamPlayer2D
 Node
 AnimatedSprite2D
-AnimationPlayer
 CollisionShape2D
 StaticBody2D
 Area2D
@@ -11,5 +13,3 @@ HFlowContainer
 VFlowContainer
 Label
 ColorRect
-AudioStreamPlayer
-Sprite2D

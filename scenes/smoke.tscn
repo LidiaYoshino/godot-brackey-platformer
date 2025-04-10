@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://7sk60ci2wer5"]
+
+[ext_resource type="Script" uid="uid://dprcvrxxsdrg7" path="res://scenes/smoke.gd" id="1_rx0m8"]
+[ext_resource type="Texture2D" uid="uid://bcaom3i87x24y" path="res://assets/sprites/smoke_light.png" id="2_rx0m8"]
+
+[sub_resource type="Curve" id="Curve_acmqr"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, -141.573), 0.0, 0.0, 0, 0, Vector2(1, 351.91), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_rx0m8"]
+offsets = PackedFloat32Array(0, 0.129944, 0.474576, 0.80791, 1)
+colors = PackedColorArray(0.8463, 0.872842, 0.91, 0.462745, 0.843137, 0.870588, 0.909804, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.392157)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rx0m8")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 200
+texture = ExtResource("2_rx0m8")
+lifetime = 13.0
+randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(5, 1)
+gravity = Vector2(2, -4)
+angular_velocity_curve = SubResource("Curve_acmqr")
+angle_min = -10.0
+angle_max = 10.0
+scale_amount_max = 1.5
+color_initial_ramp = SubResource("Gradient_rx0m8")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

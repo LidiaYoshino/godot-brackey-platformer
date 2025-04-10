@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cnxfntcj5s0y5"]
 
 [ext_resource type="Texture2D" uid="uid://di5p70irlxlmu" path="res://assets/sprites/fruit.png" id="1_jprpe"]
-[ext_resource type="Script" path="res://scripts/fruit.gd" id="1_yh7nh"]
+[ext_resource type="Script" uid="uid://dtga3w1h76tp8" path="res://scripts/fruit.gd" id="1_yh7nh"]
 [ext_resource type="AudioStream" uid="uid://b0udv6h6amfoj" path="res://assets/sounds/power_up.wav" id="2_kslwi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrpi4"]
@@ -92,8 +92,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n11g2"]
 _data = {
-"RESET": SubResource("Animation_hcq13"),
-"pickup": SubResource("Animation_00afw")
+&"RESET": SubResource("Animation_hcq13"),
+&"pickup": SubResource("Animation_00afw")
 }
 
 [node name="Fruit" type="Area2D"]
@@ -113,7 +113,7 @@ bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_n11g2")
+&"": SubResource("AnimationLibrary_n11g2")
 }
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

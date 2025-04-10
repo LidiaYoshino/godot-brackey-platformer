@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://p23rfpm6hbfe"]
 
-[ext_resource type="Script" path="res://scripts/finish_line.gd" id="1_66v00"]
+[ext_resource type="Script" uid="uid://1tugo1levpt1" path="res://scripts/finish_line.gd" id="1_66v00"]
 [ext_resource type="AudioStream" uid="uid://de4p47qo0aht3" path="res://assets/sounds/level_pass.mp3" id="2_3imno"]
 [ext_resource type="Texture2D" uid="uid://bmfq478fgf46o" path="res://assets/sprites/door.png" id="2_8kkm4"]
 
@@ -164,8 +164,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3lmvn"]
 _data = {
-"RESET": SubResource("Animation_x4j7x"),
-"finish": SubResource("Animation_cttpv")
+&"RESET": SubResource("Animation_x4j7x"),
+&"finish": SubResource("Animation_cttpv")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42qh8"]

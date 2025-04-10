@@ -20,7 +20,7 @@ const LEVEL_BY_TYPE = {
 @onready var title_screen = $"Title Screen"
 @onready var level_container = $LevelContainer
 
-var current_level = "bare"
+var current_level = "title"
 
 func _ready():
 	GameManager.connect('player_died', reload_level)
@@ -30,7 +30,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("confirm"):
+	if current_level == "title" && Input.is_action_just_pressed("confirm"):
+		current_level = "bare"
 		title_screen.visible = false
 		load_current_level()
 
@@ -52,4 +53,3 @@ func finish_level(door_type):
 	level_container.get_child(0).queue_free()
 	load_current_level()
 	GameManager.allow_movement = true
-

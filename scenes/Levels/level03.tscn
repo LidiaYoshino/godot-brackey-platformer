@@ -252,7 +252,7 @@ platform_type = "sand"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
-"": SubResource("AnimationLibrary_qt6xp")
+&"": SubResource("AnimationLibrary_qt6xp")
 }
 autoplay = "RESET"
 

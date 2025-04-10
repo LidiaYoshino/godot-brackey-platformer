@@ -1,7 +1,441 @@
-[gd_scene load_steps=3 format=3 uid="uid://cketrhak63m78"]
+[gd_scene load_steps=22 format=3 uid="uid://cketrhak63m78"]
 
 [ext_resource type="Script" uid="uid://ddx6hejbu0okt" path="res://scripts/restart.gd" id="1_hgsx3"]
+[ext_resource type="Texture2D" uid="uid://df2mlp55nc05u" path="res://assets/sprites/victory_screen_background.png" id="2_hl81x"]
 [ext_resource type="FontFile" uid="uid://ba4slkm336nnt" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_xlpjb"]
+[ext_resource type="Texture2D" uid="uid://y1cmgsf6wn07" path="res://assets/sprites/victory_screen_close.png" id="4_04qlw"]
+[ext_resource type="Shader" uid="uid://e4xrirovipj2" path="res://scenes/fade.gdshader" id="4_aeqvq"]
+[ext_resource type="Texture2D" uid="uid://dfvnfkpphy1qa" path="res://assets/sprites/victory_screen_closest.png" id="5_aeqvq"]
+[ext_resource type="Texture2D" uid="uid://fqcusllwnhhb" path="res://assets/sprites/victory_screen_far.png" id="6_rlw0o"]
+[ext_resource type="Texture2D" uid="uid://7v8vggtv23pw" path="res://assets/sprites/victory_screen_mid.png" id="7_m35g4"]
+[ext_resource type="Texture2D" uid="uid://bhvdn8ige7314" path="res://assets/sprites/victory_screen_home.png" id="8_wdhy8"]
+[ext_resource type="Texture2D" uid="uid://c1in57rcqbccx" path="res://assets/sprites/victory_screen_title.png" id="9_0ya2q"]
+[ext_resource type="PackedScene" uid="uid://7sk60ci2wer5" path="res://scenes/smoke.tscn" id="11_rlw0o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m35g4"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rlw0o"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aeqvq"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wdhy8"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ya2q"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w13b5"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0iwmx"]
+shader = ExtResource("4_aeqvq")
+shader_parameter/visibility_percentage = 0.0
+
+[sub_resource type="Animation" id="Animation_aeqvq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRectClosest:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRectClose:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRectMid:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRectFar:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRectHome:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRectHomebound:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TextureRectClosest:material:shader_parameter/visibility_percentage")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TextureRectClose:material:shader_parameter/visibility_percentage")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TextureRectMid:material:shader_parameter/visibility_percentage")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TextureRectFar:material:shader_parameter/visibility_percentage")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TextureRectHome:material:shader_parameter/visibility_percentage")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TextureRectHomebound:material:shader_parameter/visibility_percentage")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label2:material:shader_parameter/visibility_percentage")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2D:is_active")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2D2:is_active")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_04qlw"]
+resource_name = "victory_cutscene"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRectClosest:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.566667, 1.83333),
+"transitions": PackedFloat32Array(1, 1.8025, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRectClose:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.80333, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRectMid:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.1, 4.43333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRectFar:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.42333, 5.44333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRectHome:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRectHomebound:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.66667, 5.76667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TextureRectClosest:material:shader_parameter/visibility_percentage")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.566667, 0.816667, 1.55333, 1.80333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 100.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TextureRectClose:material:shader_parameter/visibility_percentage")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.80333, 2.05333, 2.85, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 100.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TextureRectMid:material:shader_parameter/visibility_percentage")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.11, 3.36, 4.19333, 4.43333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 100.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TextureRectFar:material:shader_parameter/visibility_percentage")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(4.41, 4.63333, 5.23333, 5.44),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 100.0, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TextureRectHome:material:shader_parameter/visibility_percentage")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(2.72667, 2.97667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TextureRectHomebound:material:shader_parameter/visibility_percentage")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.72667, 2.97667, 5.51001, 5.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 100.0, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label2:material:shader_parameter/visibility_percentage")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(6.875, 7.145),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2D:is_active")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 5.73333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2D2:is_active")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 5.73333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rlw0o"]
+_data = {
+&"RESET": SubResource("Animation_aeqvq"),
+&"victory_cutscene": SubResource("Animation_04qlw")
+}
 
 [node name="Victory" type="Control"]
 custom_minimum_size = Vector2(1152, 648)
@@ -20,34 +454,125 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.823529, 0.2, 1)
 
-[node name="HFlowContainer" type="HFlowContainer" parent="."]
+[node name="TextureRectBackground" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -50.0
-offset_bottom = 50.0
+anchor_bottom = 1.0
+offset_left = -7.20001
+offset_right = 7.19995
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
+texture = ExtResource("2_hl81x")
+expand_mode = 3
+stretch_mode = 4
 
-[node name="Label" type="Label" parent="HFlowContainer"]
-custom_minimum_size = Vector2(1000, 100)
+[node name="Label2" type="Label" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_m35g4")
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.901961, 0.372549, 0.411765, 1)
+offset_left = 45.0
+offset_top = 436.0
+offset_right = 685.0
+offset_bottom = 535.0
+theme_override_colors/font_color = Color(0.94902, 0.454902, 0.105882, 1)
 theme_override_fonts/font = ExtResource("2_xlpjb")
-theme_override_font_sizes/font_size = 64
-text = "VICTORY"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="HFlowContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.901961, 0.372549, 0.411765, 1)
-theme_override_fonts/font = ExtResource("2_xlpjb")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "press enter to restart"
-horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRectClosest" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_rlw0o")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_right = 7.40002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_aeqvq")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRectClose" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_aeqvq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.20001
+offset_right = 7.19995
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_04qlw")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRectMid" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_wdhy8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_m35g4")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRectFar" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_0ya2q")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.20001
+offset_right = 7.19995
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_rlw0o")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRectHome" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_w13b5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_wdhy8")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRectHomebound" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_0iwmx")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_0ya2q")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rlw0o")
+}
+autoplay = "victory_cutscene"
+
+[node name="Node2D" parent="." instance=ExtResource("11_rlw0o")]
+position = Vector2(896, 281)
+
+[node name="Node2D2" parent="." instance=ExtResource("11_rlw0o")]
+position = Vector2(912, 281)
